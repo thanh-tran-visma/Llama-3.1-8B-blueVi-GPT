@@ -14,13 +14,13 @@ class BlueViGptModel:
         hf_token = os.getenv("HF_TOKEN")
 
         if hf_token:
-            login(hf_token, add_to_git_credential=True)
+            login(hf_token, add_to_git_credential=False)
         else:
             raise ValueError("HF_TOKEN environment variable is not set.")
 
         llm = Llama.from_pretrained(
             repo_id=model_name,
-            filename="unsloth.Q4_K_M.gguf",
+            filename="unsloth.Q8_0.gguf",
             cache_dir=model_cache_dir
         )
         return llm 

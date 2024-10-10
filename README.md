@@ -29,7 +29,7 @@ You will need a Hugging Face access token to run this project. You can get your 
     ```
 4. **Add the**
     ```
-    127.0.0.1 bluevi-gpt.dotweb.test
+    127.0.0.1 gpt.dotweb.test
     to your /etc/hosts file (Linux/MAC) or C:\Windows\System32\drivers\etc\hosts (Windows)
    ```
 4. **Run the server**

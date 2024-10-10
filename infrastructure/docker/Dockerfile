@@ -16,6 +16,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt
 
+# Remove cache
+RUN find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs -r rm -rf
+
 # Copy the rest of the application code
 COPY . .
 
